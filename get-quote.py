@@ -2,7 +2,10 @@ import random
 
 
 def primary():
-	
+	#Here we are opening the quotes.txt file, 
+	#reading all the lines into a new variable called quotes,
+	#then closing the file (defined by the variable f). Finally, 
+	#we print out the quotes.
 
 	f = open("quotes.txt")
 	quotes = f.readlines()
@@ -17,7 +20,12 @@ def primary():
 
 	#Instead of including a number between the brackets, 
 	#we'll put our random number variable:
-	print(quotes[rnd])
+	quote_output = quotes[rnd]
+
+	quote_output = quote_output.rstrip("\n")
+
+	print(quote_output)
+
 
 if __name__== "__main__":
 	primary()
